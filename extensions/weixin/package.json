@@ -1,0 +1,29 @@
+{
+  "name": "@openclaw/channel-weixin",
+  "version": "0.1.0",
+  "description": "WeChat (微信) channel plugin for OpenClaw via iLink Bot protocol",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "login": "tsx src/login-web.ts"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "dependencies": {
+    "qrcode-terminal": "0.12.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "@types/node": "^22.0.0",
+    "@types/qrcode-terminal": "^0.12.2"
+  },
+  "keywords": ["openclaw", "weixin", "wechat", "channel", "ilink"]
+}

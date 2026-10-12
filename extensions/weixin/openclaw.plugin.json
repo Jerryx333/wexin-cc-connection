@@ -1,0 +1,38 @@
+{
+  "name": "@openclaw/channel-weixin",
+  "channels": {
+    "weixin": {
+      "description": "WeChat (微信) via iLink Bot protocol",
+      "config": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "Bot token obtained from QR login"
+          },
+          "baseUrl": {
+            "type": "string",
+            "description": "iLink API base URL",
+            "default": "https://ilinkai.weixin.qq.com"
+          },
+          "userId": {
+            "type": "string",
+            "description": "iLink user ID from login"
+          },
+          "allowFrom": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Allowed WeChat user IDs for DM access"
+          },
+          "dmPolicy": {
+            "type": "string",
+            "enum": ["pairing", "open"],
+            "default": "pairing",
+            "description": "DM access policy: 'pairing' requires approval, 'open' allows all"
+          }
+        },
+        "required": ["token"]
+      }
+    }
+  }
+}
